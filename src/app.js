@@ -1,3 +1,4 @@
+require('dotenv').config()
 const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require("fs");
@@ -51,4 +52,6 @@ bot.on("message", async (message) => {
   if (commandfile) commandfile.run(bot, message, args);
 });
 
+
+console.log(process.env.DISCORD_KEY)
 bot.login(process.env.DISCORD_KEY);
