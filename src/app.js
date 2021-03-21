@@ -51,4 +51,4 @@ bot.on("message", async (message) => {
   if (commandfile) commandfile.run(bot, message, args);
 });
 
-bot.login(process.env.API_KEY);
+bot.login(process.env.DISCORD_KEY);
