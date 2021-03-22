@@ -1,11 +1,12 @@
 require('dotenv').config()
+const server = require("../server");
+server.init();
 const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require("fs");
 const setupInterceptors = require("./axios").default;
 const bot = new Discord.Client({ disableEveryone: true });
 bot.commands = new Discord.Collection();
-
 setupInterceptors();
 
 fs.readdir("./src/commands/", (err, files) => {
