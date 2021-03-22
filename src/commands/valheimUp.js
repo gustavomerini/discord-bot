@@ -4,10 +4,10 @@ const config = require("../config.json");
 module.exports.run = async (bot, message, args) => {
   try {
     await axios.post(`${config.baseUrl}/api/valheim/status`, {
-      status: "down",
+      status: "up",
     });
     message.channel.send("Serber está iniciante, uhummmmmmmmmmmmmmmm");
-  } catch(error) {
+  } catch (error) {
     console.error(error);
   }
 };
