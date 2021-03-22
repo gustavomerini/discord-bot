@@ -1,3 +1,4 @@
 {
-  "prefix": "!"
+  "prefix": "!",
+  "baseUrl": "https://1v0pfqlza3.execute-api.us-east-1.amazonaws.com"
 }

@@ -2,8 +2,11 @@ require('dotenv').config()
 const config = require("./config.json");
 const Discord = require("discord.js");
 const fs = require("fs");
+const setupInterceptors = require("./axios").default;
 const bot = new Discord.Client({ disableEveryone: true });
 bot.commands = new Discord.Collection();
+
+setupInterceptors();
 
 fs.readdir("./src/commands/", (err, files) => {
   if (err) console.log(err);
@@ -27,7 +30,7 @@ bot.on("ready", async () => {
     `${bot.user.username} is online on ${bot.guilds.cache.size} servers!`
   );
 
-  bot.user.setActivity("My Code", { type: "PLAYING" });
+  bot.user.setActivity("Você fazendo merda", { type: "WATCHING" });
 });
 
 //Command Manager
@@ -52,6 +55,4 @@ bot.on("message", async (message) => {
   if (commandfile) commandfile.run(bot, message, args);
 });
 
-
-console.log(process.env.DISCORD_KEY)
 bot.login(process.env.DISCORD_KEY);
