@@ -7,7 +7,7 @@ module.exports.run = async (bot, message, args) => {
       status: "down",
     });
     message.channel.send("Serber está parante");
-    bot.user.setActivity(" 🔴 OFF THE LINE 🔴 ", { type: "O SERBER ESTÁ:" });
+    bot.user.setActivity("🔴 OFF THE LINE 🔴", { type: "PLAYING" });
   } catch (error) {
     console.error(error);
   }
