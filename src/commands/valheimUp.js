@@ -7,6 +7,7 @@ module.exports.run = async (bot, message, args) => {
       status: "up",
     });
     message.channel.send("Serber está iniciante, uhummmmmmmmmmmmmmmm");
+    bot.user.setActivity("🟢 ON THE LINE 🟢", { type: "O SERBER ESTÁ:" });
   } catch (error) {
     console.error(error);
   }

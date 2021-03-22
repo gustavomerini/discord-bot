@@ -31,7 +31,7 @@ bot.on("ready", async () => {
     `${bot.user.username} is online on ${bot.guilds.cache.size} servers!`
   );
 
-  bot.user.setActivity("Você fazendo merda", { type: "WATCHING" });
+  bot.user.setActivity("🟢 ON THE LINE 🟢", { type: "O SERBER ESTÁ:" });
 });
 
 //Command Manager
